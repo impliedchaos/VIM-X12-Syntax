@@ -9,14 +9,14 @@ Put "x12.vim" it in your ~/.vim/syntax directory, open an EDI document and ":set
 To automatically set the filetype you can create a ~/.vim/scripts.vim file and inclue the following:
 ```
 if did_filetype()
-    finish
- endif
- if getline(1) =~ '^ISA' || getline(2) =~ '^ISA'
-    setfiletype x12
- endif
- ```
+   finish
+endif
+if getline(1) =~ '^ISA' || getline(2) =~ '^ISA'
+   setfiletype x12
+endif
+```
 
 ## Also
-- This has most segment names from version 2010 to 5010
+- This has most segment names from X12 versions 2000 to 6040
 - Doesn't include support for mailbag envelopes
 - Probably need to add transactional acknowledgment segments, but nobody I deal with uses them.  Adding "TA1|TA3" to the x12Envelope regular expressions is easy, if you need them.
