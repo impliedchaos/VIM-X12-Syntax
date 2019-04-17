@@ -15,3 +15,8 @@ if did_filetype()
     setfiletype x12
  endif
  ```
+
+## Also
+- This has most segment names from version 2010 to 5010
+- Doesn't include support for mailbag envelopes
+- Probably need to add transactional acknowledgment segments, but nobody I deal with uses them.  Adding "TA1|TA3" to the x12Envelope regular expressions is easy, if you need them.
